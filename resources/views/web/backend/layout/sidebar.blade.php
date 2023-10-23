@@ -63,7 +63,7 @@
     </div>
 </nav>
 
-<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-72 h-screen bg-indigo-600 pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-72 h-screen bg-primary-600 pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
     @if (Auth::user()->admin)
 
@@ -150,7 +150,7 @@
 
                 <div id="dropdown-cta" class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900" role="alert">
                     <div class="flex items-center mb-3">
-                    <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900">New Dashboard</span>
+                    <span class="bg-primary-100 text-primary-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-900">New Dashboard</span>
                     <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 h-6 w-6 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800" data-dismiss-target="#dropdown-cta" aria-label="Close">
                         <span class="sr-only">Close</span>
                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -169,8 +169,8 @@
     @else
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="{{ route('dashboard.home') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ url()->current() == route('dashboard.home') ? 'text-indigo-600 font-semibold p-1.5 ml-2 bg-gray-200  dark:bg-gray-700' : '' }}">
-                    <svg class="{{  url()->current() == route('dashboard.home') ? 'text-indigo-600 w-6 h-6' : 'text-gray-500 w-5 h-5 group-hover:text-gray-900'  }} transition duration-75 dark:text-gray-400  dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                <a href="{{ route('dashboard.home') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ url()->current() == route('dashboard.home') ? 'text-primary-600 font-semibold p-1.5 ml-2 bg-gray-200  dark:bg-gray-700' : '' }}">
+                    <svg class="{{  url()->current() == route('dashboard.home') ? 'text-primary-600 w-6 h-6' : 'text-gray-500 w-5 h-5 group-hover:text-gray-900'  }} transition duration-75 dark:text-gray-400  dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                     <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
                     <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
                     </svg>
@@ -182,7 +182,7 @@
                     <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
                         <path d="M18 14H2a2 2 0 0 1-2-2V9.5a1 1 0 0 1 1-1 1.5 1.5 0 0 0 0-3 1 1 0 0 1-1-1V2a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2.5a1 1 0 0 1-1 1 1.5 1.5 0 0 0 0 3 1 1 0 0 1 1 1V12a2 2 0 0 1-2 2Z"/>
                     </svg>
-                    <span class="ml-3">Ticket</span>
+                    <span class="ml-3">Project</span>
                 </a>
             </li>
 
@@ -212,12 +212,49 @@
                         </li>
                     </ul> --}}
 
-                    <li>
+                    {{-- <li>
                         <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97"/>
                             </svg>
                             <span class="ml-3">Log Activity</span>
+                        </a>
+                    </li> --}}
+
+                    <li>
+                        <a href="{{ route('dashboard.master-kelas.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ url()->current() == route('dashboard.master-kelas.index') ? 'text-primary-600 font-semibold p-1.5 ml-2 bg-gray-200  dark:bg-gray-700' : '' }}">
+                            <svg class="{{  url()->current() == route('dashboard.master-kelas.index') ? 'text-primary-600 w-6 h-6' : 'text-primary-500 w-5 h-5 group-hover:text-primary-900'  }} transition duration-75 dark:text-gray-400  dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="currentColor" viewBox="0 0 20 14">
+                                <path d="M18.7 4.531 14.866.84A2.985 2.985 0 0 0 12.784 0H1.969A1.987 1.987 0 0 0 0 2v10a1.987 1.987 0 0 0 1.969 2h10.736a3.004 3.004 0 0 0 2.221-.983l3.912-4.309a3.023 3.023 0 0 0-.138-4.177Z"/>
+                              </svg>
+
+                            <span class="ml-3">Master Kelas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dashboard.master-jurusan.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ url()->current() == route('dashboard.master-jurusan.index') ? 'text-primary-600 font-semibold p-1.5 ml-2 bg-gray-200  dark:bg-gray-700' : '' }}">
+                            <svg class="{{  url()->current() == route('dashboard.master-jurusan.index') ? 'text-primary-600 w-6 h-6' : 'text-primary-500 w-5 h-5 group-hover:text-primary-900'  }} transition duration-75 dark:text-gray-400  dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="currentColor" viewBox="0 0 20 14">
+                                <path d="M18.7 4.531 14.866.84A2.985 2.985 0 0 0 12.784 0H1.969A1.987 1.987 0 0 0 0 2v10a1.987 1.987 0 0 0 1.969 2h10.736a3.004 3.004 0 0 0 2.221-.983l3.912-4.309a3.023 3.023 0 0 0-.138-4.177Z"/>
+                              </svg>
+
+                            <span class="ml-3">Master Jurusan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dashboard.master-tech-stack.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ url()->current() == route('dashboard.master-tech-stack.index') ? 'text-primary-600 font-semibold p-1.5 ml-2 bg-gray-200  dark:bg-gray-700' : '' }}">
+                            <svg class="{{  url()->current() == route('dashboard.master-tech-stack.index') ? 'text-primary-600 w-6 h-6' : 'text-primary-500 w-5 h-5 group-hover:text-primary-900'  }} transition duration-75 dark:text-gray-400  dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="currentColor" viewBox="0 0 20 14">
+                                <path d="M18.7 4.531 14.866.84A2.985 2.985 0 0 0 12.784 0H1.969A1.987 1.987 0 0 0 0 2v10a1.987 1.987 0 0 0 1.969 2h10.736a3.004 3.004 0 0 0 2.221-.983l3.912-4.309a3.023 3.023 0 0 0-.138-4.177Z"/>
+                              </svg>
+
+                            <span class="ml-3">Master Tech Stack</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dashboard.master-user.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ url()->current() == route('dashboard.master-user.index') ? 'text-primary-600 font-semibold p-1.5 ml-2 bg-gray-200  dark:bg-gray-700' : '' }}">
+                              <svg class="{{  url()->current() == route('dashboard.master-user.index') ? 'text-primary-600 w-6 h-6' : 'text-primary-500 w-5 h-5 group-hover:text-primary-900'  }} transition duration-75 dark:text-gray-400  dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 19">
+                                <path d="M7.324 9.917A2.479 2.479 0 0 1 7.99 7.7l.71-.71a2.484 2.484 0 0 1 2.222-.688 4.538 4.538 0 1 0-3.6 3.615h.002ZM7.99 18.3a2.5 2.5 0 0 1-.6-2.564A2.5 2.5 0 0 1 6 13.5v-1c.005-.544.19-1.072.526-1.5H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h7.687l-.697-.7ZM19.5 12h-1.12a4.441 4.441 0 0 0-.579-1.387l.8-.795a.5.5 0 0 0 0-.707l-.707-.707a.5.5 0 0 0-.707 0l-.795.8A4.443 4.443 0 0 0 15 8.62V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.12c-.492.113-.96.309-1.387.579l-.795-.795a.5.5 0 0 0-.707 0l-.707.707a.5.5 0 0 0 0 .707l.8.8c-.272.424-.47.891-.584 1.382H8.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.12c.113.492.309.96.579 1.387l-.795.795a.5.5 0 0 0 0 .707l.707.707a.5.5 0 0 0 .707 0l.8-.8c.424.272.892.47 1.382.584v1.12a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1.12c.492-.113.96-.309 1.387-.579l.795.8a.5.5 0 0 0 .707 0l.707-.707a.5.5 0 0 0 0-.707l-.8-.795c.273-.427.47-.898.584-1.392h1.12a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5ZM14 15.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
+                              </svg>
+
+                            <span class="ml-3">Master User</span>
                         </a>
                     </li>
                 </ul>
@@ -244,7 +281,7 @@
 
                     <div id="dropdown-cta" class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900" role="alert">
                         <div class="flex items-center mb-3">
-                        <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900">New Dashboard</span>
+                        <span class="bg-primary-100 text-primary-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-900">New Dashboard</span>
                         <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 h-6 w-6 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800" data-dismiss-target="#dropdown-cta" aria-label="Close">
                             <span class="sr-only">Close</span>
                             <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">

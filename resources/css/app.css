@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    /* Your base primary color */
+    --primary: #ff9024;
+
+    /* Primary shades */
+    --primary-50: #ffd4a0;
+    --primary-100: #ffc787;
+    --primary-200: #ffb96d;
+    --primary-300: #ffac54;
+    --primary-400: #ffa03a;
+    --primary-500: #ff9321; /* Your base color */
+    --primary-600: #e0851b;
+    --primary-700: #c27615;
+    --primary-800: #a3680f;
+    --primary-900: #844909;
+}
+
+.bg-card-pattern {
+    background-color: #1f2937;
+    opacity: 0.9;
+    background-image: radial-gradient(#ff9321 0.75px, #1f2937 0.75px);
+    background-size: 11px 11px;
+    background-position: right bottom;
+}
+
+.wave-bg {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1400"><path fill="none" d="M0 0h2000v1400H0z"/><path d="M0 700h0c71.075-36.284 142.15-72.567 218-74 75.85-1.433 156.477 31.986 230 77 73.523 45.014 139.943 101.624 211 77 71.057-24.624 146.75-130.48 226-131 79.25-.52 162.056 104.297 234 107 71.944 2.703 133.026-96.707 208-142 74.974-45.293 163.838-36.47 238 9s133.62 127.588 216 146c82.38 18.412 187.68-26.882 228-49 40.32-22.118 15.66-21.059 31-20" fill="none" stroke="#ffab53" stroke-width="5" stroke-linecap="round"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #ff9321;
+}

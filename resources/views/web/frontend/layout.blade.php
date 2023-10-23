@@ -21,12 +21,12 @@
     </head>
 
 
-    <body class=" bg-slate-800 dark">
-        @include('web.backend.layout.sidebar')
+    <body class=" bg-gray-800 dark">
+        @include('web.frontend.layout.navbar')
 
         @yield('content')
 
-
+        @include('web.frontend.layout.footer')
         @stack('pre-js')
         <script src="/helper.js"></script>
         {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script> --}}
